@@ -3,12 +3,17 @@
         "moduleResolution": "node",
         "module": "commonjs",
         "target": "es2022",
+        "lib": [
+            "es2022",
+            "dom"
+        ],
         "types": [
             "node",
             "@wdio/globals/types",
             "expect-webdriverio",
             "@wdio/cucumber-framework",
-            "@wdio/appium-service"
+            "@wdio/appium-service",
+            "@wdio/browserstack-service"
         ],
         "skipLibCheck": true,
         "noEmit": true,
@@ -21,6 +26,7 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": [
-        "test"
+        "test",
+        "wdio.conf.ts"
     ]
 }
